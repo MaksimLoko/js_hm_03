@@ -1,37 +1,31 @@
 /*
-Задание 3
-Напиши функцию findBestEmployee(employees), которая принимает 
-объект сотрудников и возвращает имя самого продуктивного 
-(который выполнил больше всех задач). Сотрудники и кол-во выполненых задач 
-содержатся как свойства объекта в формате "имя":"кол-во задач".
+Задание 4
+Напиши функцию countTotalSalary(employees) принимающую объект зарплат. Функция считает общую сумму запрплаты работников и возращает ее. Каждое поле объекта, передаваемого в функцию, имеет вид "имя":"зарплата".
 */
+const countTotalSalary = function (employees) {
+  let totalSalary = 0;
+  let sum = Object.values(employees);
 
-const findBestEmployee = function (employees) {
-  // твой код
+  for (let total of sum) {
+    totalSalary = total + totalSalary;
+  }
+  return totalSalary;
 };
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
+console.log(countTotalSalary({})); // 0
 console.log(
-  findBestEmployee({
-    ann: 29,
-    david: 35,
-    helen: 1,
-    lorence: 99,
+  countTotalSalary({
+    mango: 100,
+    poly: 150,
+    alfred: 80,
   })
-); // lorence
+); // 330
 console.log(
-  findBestEmployee({
-    poly: 12,
-    mango: 17,
-    ajax: 4,
+  countTotalSalary({
+    kiwi: 200,
+    lux: 50,
+    chelsy: 150,
   })
-); // mango
-console.log(
-  findBestEmployee({
-    lux: 147,
-    david: 21,
-    kiwi: 19,
-    chelsy: 38,
-  })
-); // lux
+); // 400

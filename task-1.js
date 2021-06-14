@@ -13,3 +13,14 @@ const user = {
   hobby: "html",
   premium: true,
 };
+user.mood = "happy";
+user.hobby = "skydiving";
+user.premium = false;
+
+// let entry = Object.entries(user);
+
+for (let entry of Object.entries(user)) {
+  let key = entry[0];
+  let value = entry[1];
+  console.log(`${key} : ${value}`);
+}

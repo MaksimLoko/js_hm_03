@@ -5,7 +5,7 @@
 */
 
 const countProps = function (obj) {
-  // твой код
+  return Object.values(obj).length; // твой код
 };
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.

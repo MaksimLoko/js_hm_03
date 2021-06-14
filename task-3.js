@@ -7,8 +7,25 @@
 */
 
 const findBestEmployee = function (employees) {
-  // твой код
+  // const entries = Object.entries(employees);
+  // let maxNumber = 0;
+  // let bestEmployee;
+
+  // for (let entry of entries) {
+  //   console.log(entry);
+  //   if (maxNumber < entry[1]) {
+  //     maxNumber = entry[1];
+  //     bestEmployee = entry[0];
+  //   }
+  // }
+  // return bestEmployee;
+
+  let keys = Object.keys(employees);
+  let values = Object.values(employees);
+  let max = values.indexOf(Math.max(...values));
+  return keys[max];
 };
+
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
